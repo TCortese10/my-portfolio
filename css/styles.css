@@ -44,6 +44,8 @@ header {
         font-size: smaller;
         text-decoration: none;
         transition: background 0.2s;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 
 
     }
@@ -70,7 +72,7 @@ header {
 .grid-section {
     padding: 30px;
     background-color: white;
-
+    
 }
 
 h2 {
@@ -82,7 +84,7 @@ h2 {
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto auto auto;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
     margin-top: 20px;
     text-align: center;
 
@@ -100,8 +102,7 @@ h2 {
     font-size: 20px;
     text-decoration: none;
     transition: background 0.2s;
-
-
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
 
@@ -119,6 +120,7 @@ h2 {
     padding: 50px;
     border-radius: 5px;
     text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -135,7 +137,7 @@ h4 {
 
 footer {
     text-align: center;
-    position: bottom;
+    position: fixed;
     bottom: 0;
     width: 100%;
     color: lightblue;
@@ -152,11 +154,12 @@ form {
     background-color: var(--secondary-color);
     color: white;
     padding: 20px;
-    border: 1px solid white;
     border-radius: 10px;
     width: 350px;
     margin: 0 auto;
-
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   
 }
 
 input[type="text"],
@@ -198,4 +201,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: rgba(173, 216, 230, 0.685);
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    video, audio {
+        width: 100%;
+        height: auto;
+    }
 }
