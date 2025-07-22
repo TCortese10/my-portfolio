@@ -92,9 +92,8 @@ header {
 
 .project-card {
   display: flex;
-  background: var(--secondary-color);
+  background: rgb(243, 243, 243);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   overflow: hidden;
   min-height: 220px;
   position: relative;
@@ -104,6 +103,7 @@ header {
   width: 40%;
   object-fit: cover;
   min-height: 100%;
+  border-radius: 500px;
 }
 
 .project-content {
@@ -116,12 +116,12 @@ header {
 
 .project-title {
   font-size: 1.25em;
-  color: #fff;
+  color: var(--secondary-color);
   margin-bottom: 8px;
 }
 
 .project-desc {
-  color: #e8f4fd;
+  color: var(--secondary-color);
   font-size: 1em;
   margin-bottom: auto;
 }
@@ -275,13 +275,13 @@ input[type="submit"]:hover {
     margin-top: 10px;
     padding: 6px 15px;
     border: none;
-    background: #fff;
-    color: var(--secondary-color);
+    background: var(--secondary-color);
+    color: white;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s;
 }
 .details-btn:hover {
-    background: #e8f4fd;
+    background: rgba(173, 216, 230, 0.685);
 }
