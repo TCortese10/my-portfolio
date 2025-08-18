@@ -1,16 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
     const detailButtons = document.querySelectorAll('.details-btn');
+    const modal = document.getElementById('detailModal');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+
     detailButtons.forEach(function (button) {
-        button.addEventListener('click', function (e) {
+        button.addEventListener('click', function () {
             const cardContent = button.closest('.project-content');
             const detailDiv = cardContent.querySelector('.project-details');
-            if (detailDiv.style.display === 'none' || !detailDiv.style.display) {
-                detailDiv.style.display = 'block';
-                button.textContent = 'Hide Details';
-            } else {
-                detailDiv.style.display = 'none';
-                button.textContent = 'Show Details';
-            }
+
+            modalBody.innerHTML = detailDiv.innerHTML; 
+            modal.style.display = 'flex';               
         });
+    });
+
+    
+    modalClose.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 });
