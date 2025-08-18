@@ -1,26 +1,41 @@
 :root {
-    --main-color: #000000;
+  --main-color: #000000;
+  --bg-color: white;
+  --secondary-color: #14232b;
+  --font-size-large: 24px;
+  --header-text-color: white;
+  --header-button-color: white;
+  --header-button-text-color: var(--secondary-color);
+  --project-bg-color: rgb(243, 243, 243);
+  --project-text-color: (var(--secondary-color));
+  --button-bg-color: (var(--secondary-color));
+  --button-text-color: white;
+}
+
+
+.dark-mode {
+    --main-color: white;
     --secondary-color: #14232b;
-    --font-size-large: 24px;
 }
 
 body {
     font-family: 'Verdana', sans-serif;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
     margin-top: 10px;
 }
 
 header {
 
     background-color: var(--secondary-color);
-    color: rgb(255, 255, 255);
+    color: var(--header-text-color);
     text-align: center;
     padding-top: 10px;
     font-size: 25px;
 
 
     h4 {
-        color: white;
+        color: var(--header-text-color);
         font-size: smaller;
     }
 
@@ -36,8 +51,8 @@ header {
     }
 
     .flex-item {
-        background-color: rgb(255, 255, 255);
-        color: var(--secondary-color);
+        background-color: var(--header-button-color);
+        color: var(--header-button-text-color);
         padding: 20px;
         border-radius: 5px;
         flex: 1;
@@ -71,7 +86,7 @@ header {
 
 .project-section {
     padding: 30px;
-    background-color: rgb(243, 243, 243);
+    background-color: var(--project-bg-color);
     font-size: large;
     color: var(--secondary-color);
    
@@ -92,7 +107,7 @@ header {
 
 .project-card {
   display: flex;
-  background: rgb(243, 243, 243);
+  background: var(--project-bg-color);
   border-radius: 10px;
   overflow: hidden;
   min-height: 220px;
@@ -134,29 +149,6 @@ header {
   margin-top: 16px;
 }
 
-.details-btn {
-  background: #fff;
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 6px;
-  padding: 8px 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.details-btn:hover {
-  background: rgba(173, 216, 230, 0.685);
-}
-
-.project-details {
-  margin-top: 18px;
-  background: rgba(255,255,255,0.98);
-  color: #253650;
-  border-radius: 5px;
-  padding: 15px;
-  font-size: 0.96em;
-  display: none;
-}
 
 @media (max-width: 1200px) {
   .project-gallery {
@@ -188,7 +180,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: var(--header-text-color);
     background-color: var(--secondary-color);
     font-size: small;
     padding: 10px;
@@ -200,7 +192,7 @@ footer {
 
 form {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--header-button-color);
     padding: 20px;
     border-radius: 10px;
     width: 350px;
@@ -301,8 +293,8 @@ input[type="submit"]:hover {
 }
 
 .modal-content {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
   padding: 20px;
   max-width: 600px;
   max-height: 80vh;
