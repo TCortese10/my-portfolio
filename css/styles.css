@@ -1,5 +1,4 @@
 :root {
-  --main-color: #000000;
   --bg-color: white;
   --secondary-color: #14232b;
   --font-size-large: 24px;
@@ -14,8 +13,16 @@
 
 
 .dark-mode {
-    --main-color: white;
-    --secondary-color: #14232b;
+  --bg-color: white;
+  --secondary-color: #14232b;
+  --font-size-large: 24px;
+  --header-text-color: white;
+  --header-button-color: white;
+  --header-button-text-color: var(--secondary-color);
+  --project-bg-color: rgb(243, 243, 243);
+  --project-text-color: (var(--secondary-color));
+  --button-bg-color: (var(--secondary-color));
+  --button-text-color: white;
 }
 
 body {
@@ -176,14 +183,37 @@ h4 {
 
 
 footer {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: var(--header-text-color);
-    background-color: var(--secondary-color);
-    font-size: small;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: var(--header-text-color);
+  background-color: var(--secondary-color);
+  font-size: small;
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+#dark-mode-toggle {
+  background-color: var(--header-button-color);
+  color: var(--header-button-text-color);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: small;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .contact-section {
