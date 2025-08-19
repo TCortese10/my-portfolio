@@ -1,5 +1,6 @@
 :root {
   --bg-color: white;
+  --header-bg-color: var(--secondary-color);
   --secondary-color: #14232b;
   --font-size-large: 24px;
   --header-text-color: white;
@@ -7,22 +8,31 @@
   --header-button-text-color: var(--secondary-color);
   --project-bg-color: rgb(243, 243, 243);
   --project-text-color: (var(--secondary-color));
+  --project-btn-color: var(--secondary-color);
+  --project-text-btn-color: white;
   --button-bg-color: (var(--secondary-color));
   --button-text-color: white;
+  --transition-color: rgba(173, 216, 230, 0.541);
+   --form-font-color: white;
 }
 
 
 .dark-mode {
-  --bg-color: black;
-  --secondary-color: #14232b;
+  --bg-color: #242424;
+  --header-bg-color: black;
+  --secondary-color: white;
   --font-size-large: 24px;
   --header-text-color: white;
-  --header-button-color: white;
+  --header-button-color: var(--bg-color);
   --header-button-text-color: var(--secondary-color);
-  --project-bg-color: rgb(243, 243, 243);
-  --project-text-color: (var(--secondary-color));
-  --button-bg-color: (var(--secondary-color));
+  --project-bg-color: var(--header-bg-color);
+  --project-text-color: var(--header-text-color);
+  --project-btn-color: var(--bg-color);
+  --project-text-btn-color: white;
+  --button-bg-color: var(--bg-color);
   --button-text-color: white;
+  --form-font-color: white;
+  --transition-color: rgba(160, 160, 160, 0.541);
 }
 
 body {
@@ -35,7 +45,7 @@ body {
 
 header {
 
-    background-color: var(--secondary-color);
+    background-color: var(--header-bg-color);
     color: var(--header-text-color);
     text-align: center;
     padding-top: 10px;
@@ -75,7 +85,7 @@ header {
     }
 
     .flex-item:hover {
-        background: rgba(173, 216, 230, 0.541);
+        background: var(--transition-color);
     }
 
 
@@ -193,7 +203,7 @@ footer {
   bottom: 0;
   width: 100%;
   color: var(--header-text-color);
-  background-color: var(--secondary-color);
+  background-color: var(--header-bg-color);
   font-size: small;
   box-sizing: border-box;
 }
@@ -207,7 +217,7 @@ footer {
 #dark-mode-toggle {
   background-color: var(--header-button-color);
   color: var(--header-button-text-color);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   font-size: small;
   transition: background 0.2s;
@@ -215,7 +225,7 @@ footer {
 }
 
 #dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background: var(--transition-color);
 }
 
 .contact-section {
@@ -223,8 +233,8 @@ footer {
 }
 
 form {
-    background-color: var(--secondary-color);
-    color: var(--header-button-color);
+    background-color:var(--header-bg-color);
+    color: var(--form-font-color);
     padding: 20px;
     border-radius: 10px;
     width: 350px;
@@ -241,6 +251,7 @@ input[type="email"] {
     margin: 10px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+    --form-font-color: white;
 }
 
 input[type="message"] {
@@ -261,8 +272,8 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: rgb(255, 255, 255);
-    color: var(--secondary-color);
+    background-color: var(--header-button-color);
+    color: var(--header-button-text-color);
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -272,7 +283,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: rgba(173, 216, 230, 0.685);
+    background: var(--transition-color);
 }
 
 @media (max-width: 600px) {
@@ -300,15 +311,15 @@ input[type="submit"]:hover {
     margin-top: 10px;
     padding: 6px 15px;
     border: none;
-    background: var(--secondary-color);
-    color: white;
+    background: var(--project-btn-color);
+    color: var(--project-text-btn-color);
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background 0.2s;
 }
 .details-btn:hover {
-    background: rgba(173, 216, 230, 0.685);
+    background: var(--transition-color);
 }
 
 .modal {
